@@ -1,0 +1,8 @@
+name: AIX build
+"on":
+  push:
+    branches:
+      - aix-build-test
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
