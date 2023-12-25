@@ -9,7 +9,7 @@ jobs:
     steps:
     - name: Install dependencies
       run: |
-        apt install curl
+        sudo apt install curl
     - name: Build remotely
       run: |
         curl -d '{"method": "force", "jsonrpc": "2.0", "id":0, "params":{} }' -H "Content-Type: application/json" -X POST http://43.154.77.82:8010/api/v2/forceschedulers/force
