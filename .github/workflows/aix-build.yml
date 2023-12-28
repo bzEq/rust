@@ -11,6 +11,5 @@ jobs:
       run: |
         sudo apt install python3
     - name: Build remotely
-      working-directory: ./
       run: |
-        src/ci/scripts/run-build-on-aix.py
+        ./src/ci/scripts/run-build-on-aix.py
