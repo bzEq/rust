@@ -13,6 +13,6 @@ jobs:
     - name: Build remotely
       run: |
         pwd
-        ls
+        ls rust
         chmod +x ./src/ci/scripts/run-build-on-aix.py
         ./src/ci/scripts/run-build-on-aix.py
