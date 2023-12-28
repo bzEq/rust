@@ -10,9 +10,9 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt install python3
+    - name: Print current directory
+      run: pwd
+    - name: List current directory
+      run: ls -al
     - name: Build remotely
-      run: |
-        pwd
-        ls rust
-        chmod +x ./src/ci/scripts/run-build-on-aix.py
-        ./src/ci/scripts/run-build-on-aix.py
+      run: ./src/ci/scripts/run-build-on-aix.py
