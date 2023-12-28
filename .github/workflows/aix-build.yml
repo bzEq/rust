@@ -9,10 +9,10 @@ jobs:
     steps:
     - name: Install dependencies
       run: |
-        sudo apt install python3
-    - name: Print current directory
-      run: pwd
-    - name: List current directory
-      run: ls -al
+        sudo apt install wget
+    - name: Download build script
+      run: |
+        wget https://raw.githubusercontent.com/bzEq/rust/aix-build-test/src/ci/scripts/run-build-on-aix.py
     - name: Build remotely
-      run: ./src/ci/scripts/run-build-on-aix.py
+      run: |
+        ./run-build-on-aix.py
