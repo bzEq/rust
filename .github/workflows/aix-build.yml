@@ -9,6 +9,7 @@ jobs:
     steps:
     - name: Install dependencies
       run: |
-        sudo apt install curl
+        sudo apt install python3
     - name: Build remotely
-      run: src/ci/scripts/run-build-on-aix.py
+      run: |
+        src/ci/scripts/run-build-on-aix.py
